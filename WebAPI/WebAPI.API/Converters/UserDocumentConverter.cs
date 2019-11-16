@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using WebAPI.API.Converters.Interfaces;
-using WebAPI.API.Documents;
+using WebAPI.API.Models.Documents;
 using WebAPI.Business.Contracts.Models.Dtos;
 
 namespace WebAPI.API.Converters

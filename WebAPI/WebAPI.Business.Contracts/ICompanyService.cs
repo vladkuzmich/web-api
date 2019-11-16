@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebAPI.Business.Contracts.Dtos;
+using WebAPI.Business.Contracts.Models.Dtos;
 
 namespace WebAPI.Business.Contracts
 {
     public interface ICompanyService
     {
-        Task GetByIdAsync(int id);
-        Task CreateAsync(CompanyDto companyDto);
-        Task EditAsync(CompanyDto companyDto);
-        Task DeleteAsync(int id);
+        Task<CompanyDto> GetByIdAsync(int id);
         Task<IEnumerable<CompanyDto>> GetAllAsync();
+        Task<CompanyDto> CreateAsync(CompanyDto companyDto);
+        Task EditAsync(int id, CompanyDto companyDto);
+        Task DeleteAsync(int id);
+        Task<IEnumerable<UserDto>> GetUsersByCompanyId(int id);
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using WebAPI.Business.Contracts;
-using WebAPI.Business.Contracts.Models;
 using WebAPI.Business.Contracts.Models.Dtos;
 using WebAPI.Data.Contracts;
 
@@ -31,15 +30,17 @@ namespace WebAPI.Business.Services
                 : _userConverter.ToUserDto(user);
         }
 
-        public async Task CreateAsync(UserDto userDto)
+        public async Task<UserDto> CreateAsync(UserDto userDto)
         {
             ThrowIfNull(userDto);
 
             try
             {
-                Uow.Users.Create(_userConverter.ToUser(userDto));
-
+                var user = _userConverter.ToUser(userDto);
+                Uow.Users.Create(user);
                 await Uow.CommitAsync();
+
+                return _userConverter.ToUserDto(user);
             }
             catch (Exception e)
             {
@@ -52,51 +53,76 @@ namespace WebAPI.Business.Services
         {
             ThrowIfNull(userDto);
 
+            var user = await Uow.Users.GetByIdAsync(userDto.Id);
+            if (user == null)
+            {
+                throw new ArgumentException($"User with id: '{id}' not found", nameof(id));
+            }
+
             try
             {
-                userDto.Id = id;
+                user.Name = userDto.Name;
+                user.Surname = userDto.Surname;
+                user.Email = userDto.Email;
+                user.BirthDate = userDto.BirthDate;
 
-                Uow.Users.Edit(_userConverter.ToUser(userDto));
-
+                Uow.Users.Edit(user);
                 await Uow.CommitAsync();
             }
             catch (Exception e)
             {
-                Logger.LogError(e,$"Error while editing user with id: {id}");
+                Logger.LogError(e,$"Error while editing user with id: '{userDto.Id}'");
                 throw;
             }
         }
 
-        public async Task DeleteAsync(UserDto userDto)
+        public async Task DeleteAsync(int id)
         {
-            ThrowIfNull(userDto);
+            var user = await Uow.Users.GetByIdAsync(id);
+            if (user == null)
+            {
+                throw new ArgumentException($"User with id: '{id}' not found", nameof(id));
+            }
 
             try
             {
-                Uow.Users.Delete(_userConverter.ToUser(userDto));
-
+                Uow.Users.Delete(user);
                 await Uow.CommitAsync();
             }
             catch (Exception e)
             {
-                Logger.LogError(e, $"Error while deleting user with id: {userDto.Id}");
+                Logger.LogError(e, $"Error while deleting user with id: '{id}'");
                 throw;
             }
         }
 
-        public Task<IEnumerable<UserDto>> GetAllAsync()
-        {
-            throw new System.NotImplementedException();
-        }
+        public async Task<IEnumerable<UserDto>> GetAllAsync() =>
+            _userConverter.ToUserDtos(await Uow.Users.GetAllAsync());
 
-        public Task<IEnumerable<UserDto>> GetAllByCompanyAsync(int companyId)
+        public async Task ChangeCompanyAsync(int userId, int companyId)
         {
-            throw new System.NotImplementedException();
-        }
+            var user = await Uow.Users.GetByIdAsync(userId);
+            if (user == null)
+            {
+                throw new ArgumentException($"User with id: '{userId}' not found", nameof(userId));
+            }
 
-        public Task<OperationResult> ChangeCompanyAsync(int id, int companyId)
-        {
-            throw new System.NotImplementedException();
+            var company = await Uow.Companies.GetByIdAsync(companyId);
+            if (company == null)
+            {
+                throw new ArgumentException($"Company with id: '{companyId}' not found", nameof(companyId));
+            }
+
+            try
+            {
+                user.CompanyId = companyId;
+                await Uow.CommitAsync();
+            }
+            catch (Exception e)
+            {
+                Logger.LogError(e, $"Error while changing user's company with UserId: '{userId}' and CompanyId: '{companyId}'");
+                throw;
+            }
         }
 
         private void ThrowIfNull(UserDto userDto)

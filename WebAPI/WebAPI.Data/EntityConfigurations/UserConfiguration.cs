@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.IO.Compression;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WebAPI.Data.Contracts.Entities;
 
@@ -29,7 +31,9 @@ namespace WebAPI.Data.EntityConfigurations
             builder
                 .HasOne(user => user.Company)
                 .WithMany(company => company.Users)
-                .HasForeignKey(x => x.CompanyId);
+                .HasForeignKey(x => x.CompanyId)
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

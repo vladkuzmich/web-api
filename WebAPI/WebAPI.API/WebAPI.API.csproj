@@ -6,10 +6,20 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebAPI.Business.Contracts\WebAPI.Business.Contracts.csproj" />
+    <ProjectReference Include="..\WebAPI.Business\WebAPI.Business.csproj" />
+    <ProjectReference Include="..\WebAPI.Data\WebAPI.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.5.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Scrutor" Version="3.1.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
   </ItemGroup>
 
 </Project>

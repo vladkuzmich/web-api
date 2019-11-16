@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using WebAPI.API.Documents;
+using WebAPI.API.Models.Documents;
 using WebAPI.Business.Contracts.Models.Dtos;
 
 namespace WebAPI.API.Converters.Interfaces

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using WebAPI.Business.Contracts.Dtos;
+using WebAPI.Business.Contracts.Models.Dtos;
 using WebAPI.Data.Contracts.Entities;
 
 namespace WebAPI.Business.Contracts

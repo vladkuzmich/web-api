@@ -11,6 +11,7 @@ namespace WebAPI.Business.Converters
         public UserDto ToUserDto(User user) =>
             new UserDto
             {
+                Id = user.Id,
                 Name = user.Name,
                 Surname = user.Surname,
                 BirthDate = user.BirthDate,
