@@ -27,9 +27,6 @@ namespace WebAPI.Data.Repositories
         public virtual async Task<TEntity> GetByIdAsync(int id) =>
             await DbSet.FindAsync(id);
 
-        public virtual async Task<TEntity> GetByIdWithIncludeAsync(int id, params Expression<Func<TEntity, object>>[] includeProperties) =>
-            await Include(includeProperties).SingleOrDefaultAsync();
-
         public virtual void Create(TEntity entity)
         {
             ThrowIfNull(entity);
@@ -47,16 +44,8 @@ namespace WebAPI.Data.Repositories
         public virtual void Delete(TEntity entity) => 
             DbSet.Remove(entity);
 
-        public async Task<IList<TEntity>> WhereAsync(Expression<Func<TEntity, bool>> predicate) =>
+        public virtual async Task<IList<TEntity>> WhereAsync(Expression<Func<TEntity, bool>> predicate) =>
             await DbSet.Where(predicate).ToListAsync();
-
-        protected virtual IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
-        {
-            var query = DbSet.AsNoTracking();
-
-            return includeProperties
-                .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
-        }
 
         private void ThrowIfNull(TEntity entity)
         {

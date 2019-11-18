@@ -11,7 +11,6 @@ namespace WebAPI.Data.Contracts
     {
         Task<IList<TEntity>> GetAllAsync();
         Task<TEntity> GetByIdAsync(int id);
-        Task<TEntity> GetByIdWithIncludeAsync(int id, params Expression<Func<TEntity, object>>[] includeProperties);
         void Create(TEntity entity);
         void Edit(TEntity entity);
         void Delete(TEntity entity);
