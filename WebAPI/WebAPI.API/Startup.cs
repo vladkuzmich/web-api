@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using FluentValidation.AspNetCore;
 using WebAPI.API.Extensions;
+using WebAPI.API.Formatters;
 using WebAPI.API.Middleware;
 using WebAPI.Data;
 
@@ -27,7 +28,10 @@ namespace WebAPI.API
                 .UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
 
             services
-                .AddControllers()
+                .AddControllers(options =>
+                {
+                    options.OutputFormatters.Add(new CsvOutputFormatter());
+                })
                 .AddFluentValidation();
 
             services.AddRegistrations();
