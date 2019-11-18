@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using FluentValidation.AspNetCore;
+using Microsoft.OpenApi.Models;
 using WebAPI.API.Extensions;
 using WebAPI.API.Formatters;
 using WebAPI.API.Middleware;
@@ -34,6 +35,15 @@ namespace WebAPI.API
                 })
                 .AddFluentValidation();
 
+            services.AddSwaggerGen(setup =>
+            {
+                setup.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "API"
+                });
+            });
+
             services.AddRegistrations();
         }
 
@@ -48,16 +58,22 @@ namespace WebAPI.API
             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
-
+            
             app.UseRouting();
-
+            
             app.UseAuthorization();
-
+            
             app.UseStaticFiles();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(setup =>
+            {
+                setup.SwaggerEndpoint("/swagger/v1/swagger.json", "Test API V1");
             });
         }
     }
