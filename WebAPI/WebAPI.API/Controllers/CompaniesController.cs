@@ -50,7 +50,8 @@ namespace WebAPI.API.Controllers
         {
             var createdCompany = await _companyService.CreateAsync(_companyDocumentConverter.ToCompanyDto(company));
 
-            return CreatedAtAction(nameof(GetById), new { id = createdCompany.Id }, createdCompany);
+            return CreatedAtAction(nameof(GetById), new { id = createdCompany.Id }, 
+                _companyDocumentConverter.ToCompanyDocument(createdCompany));
         }
 
         // PUT: api/companies/5
@@ -98,7 +99,7 @@ namespace WebAPI.API.Controllers
                 return NotFound($"Company with id: '{id}' not found");
             }
 
-            var userDtos = await _companyService.GetUsersByCompanyId(id);
+            var userDtos = await _companyService.GetUsersByCompanyIdAsync(id);
 
             return Ok(_userDocumentConverter.ToUserDocuments(userDtos));
         }

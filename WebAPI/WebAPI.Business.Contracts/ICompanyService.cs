@@ -11,6 +11,6 @@ namespace WebAPI.Business.Contracts
         Task<CompanyDto> CreateAsync(CompanyDto companyDto);
         Task EditAsync(int id, CompanyDto companyDto);
         Task DeleteAsync(int id);
-        Task<IEnumerable<UserDto>> GetUsersByCompanyId(int id);
+        Task<IEnumerable<UserDto>> GetUsersByCompanyIdAsync(int id);
     }
 }

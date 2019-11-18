@@ -60,7 +60,8 @@ namespace WebAPI.API.Controllers
         {
             var createdUser = await _userService.CreateAsync(_userDocumentConverter.ToUserDto(user));
 
-            return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createdUser);
+            return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, 
+                _userDocumentConverter.ToUserDocument(createdUser));
         }
 
         // PUT: api/users/5
@@ -119,7 +120,7 @@ namespace WebAPI.API.Controllers
             return NoContent();
         }
 
-        // POST: api/users/5/upload/url
+        // POST: api/users/5/upload
         [HttpPost("{id}/upload")]
         public async Task<ActionResult> Upload(int id, IFormFile file)
         {

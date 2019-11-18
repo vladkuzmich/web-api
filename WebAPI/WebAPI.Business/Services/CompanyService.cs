@@ -102,7 +102,7 @@ namespace WebAPI.Business.Services
             }
         }
 
-        public async Task<IEnumerable<UserDto>> GetUsersByCompanyId(int id)
+        public async Task<IEnumerable<UserDto>> GetUsersByCompanyIdAsync(int id)
         {
             var company = await Uow.Companies.GetByIdAsync(id);
 
