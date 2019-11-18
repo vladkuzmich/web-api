@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using WebAPI.Business.Contracts;
@@ -11,13 +12,16 @@ namespace WebAPI.Business.Services
     public class UserService : BaseService, IUserService
     {
         private readonly IUserConverter _userConverter;
+        private readonly IImageProvider _imageProvider;
 
         public UserService(
             IUnitOfWork uow, 
-            ILogger<UserService> logger, 
+            ILogger<UserService> logger,
+            IImageProvider imageProvider,
             IUserConverter userConverter)
             : base(uow, logger)
         {
+            _imageProvider = imageProvider ?? throw new ArgumentNullException(nameof(imageProvider));
             _userConverter = userConverter ?? throw new ArgumentNullException(nameof(userConverter));
         }
 
@@ -121,6 +125,37 @@ namespace WebAPI.Business.Services
             catch (Exception e)
             {
                 Logger.LogError(e, $"Error while changing user's company with UserId: '{userId}' and CompanyId: '{companyId}'");
+                throw;
+            }
+        }
+
+        public async Task UploadPhotoAsync(int id, string fileName, byte[] imageData, string storagePath, int width, int height)
+        {
+            var user = await Uow.Users.GetByIdAsync(id);
+            if (user == null)
+            {
+                throw new ArgumentException($"User with id: '{id}' not found", nameof(id));
+            }
+
+            if (storagePath == null)
+            {
+                throw new ArgumentException(nameof(storagePath));
+            }
+
+            try
+            {
+                var newFileName = $"{id.ToString()}_{fileName}";
+                var fullImageUrl = Path.Combine(storagePath, newFileName);
+
+                _imageProvider.UploadImage(imageData, fullImageUrl, width, height);
+
+                user.ImageUrl = Path.GetRelativePath(newFileName, fullImageUrl);
+                Uow.Users.Edit(user);
+                await Uow.CommitAsync();
+            }
+            catch (Exception e)
+            {
+                Logger.LogError(e, $"Error while uploading user's photo with UserId: '{id}'");
                 throw;
             }
         }

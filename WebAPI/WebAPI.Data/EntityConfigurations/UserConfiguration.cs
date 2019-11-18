@@ -29,6 +29,10 @@ namespace WebAPI.Data.EntityConfigurations
                 .HasMaxLength(255);
 
             builder
+                .Property(user => user.ImageUrl)
+                .IsRequired(false);
+
+            builder
                 .HasOne(user => user.Company)
                 .WithMany(company => company.Users)
                 .HasForeignKey(x => x.CompanyId)

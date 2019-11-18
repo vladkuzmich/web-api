@@ -8,6 +8,7 @@ namespace WebAPI.Data.Contracts.Entities
         public string Surname { get; set; }
         public string Email { get; set; }
         public DateTime? BirthDate { get; set; }
+        public string ImageUrl { get; set; }
         public int? CompanyId { get; set; }
         public Company Company { get; set; }
     }

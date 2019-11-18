@@ -29,8 +29,6 @@ namespace WebAPI.Business.Services
         {
             var company = await Uow.Companies.GetByIdAsync(id);
 
-            throw new ArgumentNullException(nameof(id), message:"SomeMessage");
-
             return company == null
                 ? null
                 : _companyConverter.ToCompanyDto(company);

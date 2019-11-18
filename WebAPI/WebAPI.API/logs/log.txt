@@ -1,0 +1,1014 @@
+10:46 [Debug] (1) Hosting starting
+10:46 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+10:46 [Information] (1) Application started. Press Ctrl+C to shut down.
+10:46 [Information] (1) Hosting environment: "Development"
+10:46 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+10:46 [Debug] (1) Hosting started
+10:46 [Information] (4) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+10:46 [Debug] (4) Wildcard detected, all requests with hosts will be allowed.
+10:46 [Debug] (4) 1 candidate(s) found for the request path '"/api/users"'
+10:46 [Debug] (4) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+10:46 [Debug] (4) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:46 [Information] (4) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:46 [Debug] (4) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+10:46 [Information] (4) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:46 [Debug] (4) Execution plan of "authorization" filters (in the following order): ["None"]
+10:46 [Debug] (4) Execution plan of "resource" filters (in the following order): ["None"]
+10:46 [Debug] (4) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:46 [Debug] (4) Execution plan of "exception" filters (in the following order): ["None"]
+10:46 [Debug] (4) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:46 [Debug] (4) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:46 [Debug] (4) An 'IServiceProvider' was created for internal use by Entity Framework.
+10:46 [Debug] (4) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:46 [Information] (4) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:46 [Debug] (4) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+10:46 [Debug] (4) Creating DbCommand for '"ExecuteReader"'.
+10:46 [Debug] (4) Created DbCommand for '"ExecuteReader"' (122ms).
+10:46 [Debug] (4) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:46 [Debug] (9) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:46 [Information] (9) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:46 [Debug] (10) Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:46 [Debug] (10) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:46 [Debug] (10) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:46 [Debug] (10) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:46 [Debug] (10) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:46 [Debug] (10) A data reader was disposed.
+10:46 [Debug] (10) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:46 [Debug] (10) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:46 [Debug] (10) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:46 [Debug] (10) No information found on request to perform content negotiation.
+10:46 [Debug] (10) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+10:46 [Debug] (10) Attempting to select the first formatter in the output formatters list which can write the result.
+10:46 [Debug] (10) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+10:46 [Information] (10) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10:46 [Information] (10) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 1133.6009000000001ms
+10:46 [Information] (10) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:46 [Debug] (10) '"ApplicationContext"' disposed.
+10:46 [Information] (10) Request finished in 1224.9753ms 200 application/json; charset=utf-8
+10:46 [Information] (10) Request starting HTTP/2.0 GET https://localhost:44334/favicon.ico  
+10:46 [Debug] (10) No candidates found for the request path '"/favicon.ico"'
+10:46 [Debug] (10) Request did not match any endpoints
+10:46 [Information] (10) Request finished in 2.0475000000000003ms 404 
+10:49 [Debug] (1) Hosting starting
+10:49 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+10:49 [Information] (1) Application started. Press Ctrl+C to shut down.
+10:49 [Information] (1) Hosting environment: "Development"
+10:49 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+10:49 [Debug] (1) Hosting started
+10:49 [Information] (7) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+10:49 [Debug] (7) Wildcard detected, all requests with hosts will be allowed.
+10:49 [Debug] (7) 1 candidate(s) found for the request path '"/api/users"'
+10:49 [Debug] (7) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+10:49 [Debug] (7) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:49 [Debug] (7) Static files was skipped as the request already matched an endpoint.
+10:49 [Information] (7) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:49 [Debug] (7) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+10:49 [Information] (7) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:49 [Debug] (7) Execution plan of "authorization" filters (in the following order): ["None"]
+10:49 [Debug] (7) Execution plan of "resource" filters (in the following order): ["None"]
+10:49 [Debug] (7) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:49 [Debug] (7) Execution plan of "exception" filters (in the following order): ["None"]
+10:49 [Debug] (7) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:49 [Debug] (7) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:49 [Debug] (7) An 'IServiceProvider' was created for internal use by Entity Framework.
+10:49 [Debug] (7) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:49 [Information] (7) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:49 [Debug] (7) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+10:49 [Debug] (7) Creating DbCommand for '"ExecuteReader"'.
+10:49 [Debug] (7) Created DbCommand for '"ExecuteReader"' (119ms).
+10:49 [Debug] (7) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:49 [Debug] (8) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:49 [Information] (8) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:49 [Debug] (4) Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:49 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:49 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:49 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:49 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:49 [Debug] (4) A data reader was disposed.
+10:49 [Debug] (4) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:49 [Debug] (4) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:49 [Debug] (4) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:49 [Debug] (4) No information found on request to perform content negotiation.
+10:49 [Debug] (4) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+10:49 [Debug] (4) Attempting to select the first formatter in the output formatters list which can write the result.
+10:49 [Debug] (4) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+10:49 [Information] (4) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10:49 [Information] (4) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 1007.2634ms
+10:49 [Information] (4) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:49 [Debug] (4) '"ApplicationContext"' disposed.
+10:49 [Information] (4) Request finished in 1096.9944ms 200 application/json; charset=utf-8
+10:49 [Information] (4) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload?= application/json 0
+10:49 [Debug] (4) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+10:49 [Debug] (4) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+10:49 [Debug] (4) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:49 [Debug] (4) Static files was skipped as the request already matched an endpoint.
+10:49 [Information] (4) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:49 [Information] (4) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:49 [Debug] (4) Execution plan of "authorization" filters (in the following order): ["None"]
+10:49 [Debug] (4) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+10:49 [Debug] (4) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:49 [Debug] (4) Execution plan of "exception" filters (in the following order): ["None"]
+10:49 [Debug] (4) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:49 [Debug] (4) Request was short circuited at resource filter '"Microsoft.AspNetCore.Mvc.ConsumesAttribute"'.
+10:49 [Debug] (4) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:49 [Debug] (4) No information found on request to perform content negotiation.
+10:49 [Debug] (4) Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json", "application/problem+xml"]'.
+10:49 [Debug] (4) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/problem+json"' to write the response.
+10:49 [Information] (4) Executing ObjectResult, writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'.
+10:49 [Information] (4) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 9.380700000000001ms
+10:49 [Information] (4) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:49 [Information] (4) Request finished in 23.3245ms 415 application/problem+json; charset=utf-8
+10:49 [Information] (7) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload application/json 0
+10:49 [Debug] (7) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+10:49 [Debug] (7) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+10:49 [Debug] (7) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:49 [Debug] (7) Static files was skipped as the request already matched an endpoint.
+10:49 [Information] (7) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:49 [Information] (7) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:49 [Debug] (7) Execution plan of "authorization" filters (in the following order): ["None"]
+10:49 [Debug] (7) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+10:49 [Debug] (7) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:49 [Debug] (7) Execution plan of "exception" filters (in the following order): ["None"]
+10:49 [Debug] (7) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:49 [Debug] (7) Request was short circuited at resource filter '"Microsoft.AspNetCore.Mvc.ConsumesAttribute"'.
+10:49 [Debug] (7) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:49 [Debug] (7) No information found on request to perform content negotiation.
+10:49 [Debug] (7) Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json", "application/problem+xml"]'.
+10:49 [Debug] (7) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/problem+json"' to write the response.
+10:49 [Information] (7) Executing ObjectResult, writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'.
+10:49 [Information] (7) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 1.3959000000000001ms
+10:49 [Information] (7) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:49 [Information] (7) Request finished in 5.007000000000001ms 415 application/problem+json; charset=utf-8
+10:50 [Information] (14) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload multipart/form-data; boundary=--------------------------634523904035973284209872 120924
+10:50 [Debug] (14) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+10:50 [Debug] (14) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+10:50 [Debug] (14) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:50 [Debug] (14) Static files was skipped as the request already matched an endpoint.
+10:50 [Information] (14) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:50 [Information] (14) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:50 [Debug] (14) Execution plan of "authorization" filters (in the following order): ["None"]
+10:50 [Debug] (14) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+10:50 [Debug] (14) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:50 [Debug] (14) Execution plan of "exception" filters (in the following order): ["None"]
+10:50 [Debug] (14) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:50 [Debug] (14) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:50 [Debug] (14) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:50 [Debug] (17) Attempting to bind parameter '"id"' of type '"System.Int32"' ...
+10:50 [Debug] (17) Attempting to bind parameter '"id"' of type '"System.Int32"' using the name '"id"' in request data ...
+10:50 [Debug] (17) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:50 [Debug] (17) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:50 [Debug] (17) Attempting to validate the bound parameter '"id"' of type '"System.Int32"' ...
+10:50 [Debug] (17) Done attempting to validate the bound parameter '"id"' of type '"System.Int32"'.
+10:50 [Debug] (17) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:50 [Debug] (17) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' using the name '"file"' in request data ...
+10:50 [Debug] (17) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:50 [Debug] (17) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:50 [Debug] (17) Attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:50 [Debug] (17) Done attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:50 [Information] (17) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:50 [Debug] (17) "(queryContext) => SingleOrDefaultAsync<User>(
+    asyncEnumerable: new AsyncQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        SqlServerQuerySqlGeneratorFactory, 
+        SqlExpressionFactory, 
+        ParameterNameGeneratorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+        SELECT TOP(1) u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+        FROM Users AS u
+        WHERE (u.Id == @__p_0) && NotEqual(@__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        WebAPI.Data.ApplicationContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+10:50 [Debug] (17) Creating DbCommand for '"ExecuteReader"'.
+10:50 [Debug] (17) Created DbCommand for '"ExecuteReader"' (0ms).
+10:50 [Debug] (17) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:50 [Debug] (17) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:50 [Information] (17) Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:50 [Debug] (19) Executed DbCommand ("30"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:50 [Debug] (19) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:50 [Debug] (19) A data reader was disposed.
+10:50 [Debug] (19) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:50 [Debug] (19) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (19) Unchanged '"User"."ImageUrl"' detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+10:51 [Debug] (19) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (19) SaveChanges starting for '"ApplicationContext"'.
+10:51 [Debug] (19) DetectChanges starting for '"ApplicationContext"'.
+10:51 [Debug] (19) DetectChanges completed for '"ApplicationContext"'.
+10:51 [Debug] (19) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (19) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (19) Beginning transaction with isolation level '"Unspecified"'.
+10:51 [Debug] (19) Began transaction with isolation level '"ReadCommitted"'.
+10:51 [Debug] (19) Creating DbCommand for '"ExecuteReader"'.
+10:51 [Debug] (19) Created DbCommand for '"ExecuteReader"' (0ms).
+10:51 [Information] (19) Executing DbCommand [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+10:51 [Debug] (17) Executed DbCommand ("8"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+10:51 [Debug] (17) A data reader was disposed.
+10:51 [Debug] (17) Committing transaction.
+10:51 [Debug] (17) Committing transaction.
+10:51 [Debug] (17) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (17) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (17) Disposing transaction.
+10:51 [Debug] (17) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (17) SaveChanges completed for '"ApplicationContext"' with 1 entities written to the database.
+10:51 [Information] (17) Executing HttpStatusCodeResult, setting HTTP status code 200
+10:51 [Information] (17) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 55937.065200000005ms
+10:51 [Information] (17) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:51 [Debug] (17) '"ApplicationContext"' disposed.
+10:51 [Information] (17) Request finished in 55940.181800000006ms 200 
+10:51 [Debug] (1) Hosting starting
+10:51 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+10:51 [Information] (1) Application started. Press Ctrl+C to shut down.
+10:51 [Information] (1) Hosting environment: "Development"
+10:51 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+10:51 [Debug] (1) Hosting started
+10:51 [Information] (8) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+10:51 [Debug] (8) Wildcard detected, all requests with hosts will be allowed.
+10:51 [Debug] (8) 1 candidate(s) found for the request path '"/api/users"'
+10:51 [Debug] (8) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+10:51 [Debug] (8) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:51 [Debug] (8) Static files was skipped as the request already matched an endpoint.
+10:51 [Information] (8) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:51 [Debug] (8) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+10:51 [Information] (8) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:51 [Debug] (8) Execution plan of "authorization" filters (in the following order): ["None"]
+10:51 [Debug] (8) Execution plan of "resource" filters (in the following order): ["None"]
+10:51 [Debug] (8) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:51 [Debug] (8) Execution plan of "exception" filters (in the following order): ["None"]
+10:51 [Debug] (8) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:51 [Debug] (8) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:51 [Debug] (8) An 'IServiceProvider' was created for internal use by Entity Framework.
+10:51 [Debug] (8) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:51 [Information] (8) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:51 [Debug] (8) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+10:51 [Debug] (8) Creating DbCommand for '"ExecuteReader"'.
+10:51 [Debug] (8) Created DbCommand for '"ExecuteReader"' (119ms).
+10:51 [Debug] (8) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (9) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Information] (9) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:51 [Debug] (4) Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:51 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (4) A data reader was disposed.
+10:51 [Debug] (4) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (4) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (4) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:51 [Debug] (4) No information found on request to perform content negotiation.
+10:51 [Debug] (4) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+10:51 [Debug] (4) Attempting to select the first formatter in the output formatters list which can write the result.
+10:51 [Debug] (4) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+10:51 [Information] (4) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10:51 [Information] (4) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 1024.3721ms
+10:51 [Information] (4) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:51 [Debug] (4) '"ApplicationContext"' disposed.
+10:51 [Information] (4) Request finished in 1113.5375000000001ms 200 application/json; charset=utf-8
+10:51 [Information] (4) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload multipart/form-data; boundary=--------------------------264561636467222223050104 120924
+10:51 [Debug] (4) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+10:51 [Debug] (4) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+10:51 [Debug] (4) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:51 [Debug] (4) Static files was skipped as the request already matched an endpoint.
+10:51 [Information] (4) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:51 [Information] (4) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:51 [Debug] (4) Execution plan of "authorization" filters (in the following order): ["None"]
+10:51 [Debug] (4) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+10:51 [Debug] (4) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:51 [Debug] (4) Execution plan of "exception" filters (in the following order): ["None"]
+10:51 [Debug] (4) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:51 [Debug] (4) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:51 [Debug] (4) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:51 [Debug] (8) Attempting to bind parameter '"id"' of type '"System.Int32"' ...
+10:51 [Debug] (8) Attempting to bind parameter '"id"' of type '"System.Int32"' using the name '"id"' in request data ...
+10:51 [Debug] (8) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:51 [Debug] (8) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:51 [Debug] (8) Attempting to validate the bound parameter '"id"' of type '"System.Int32"' ...
+10:51 [Debug] (8) Done attempting to validate the bound parameter '"id"' of type '"System.Int32"'.
+10:51 [Debug] (8) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:51 [Debug] (8) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' using the name '"file"' in request data ...
+10:51 [Debug] (8) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:51 [Debug] (8) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:51 [Debug] (8) Attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:51 [Debug] (8) Done attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:51 [Information] (8) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:51 [Debug] (8) "(queryContext) => SingleOrDefaultAsync<User>(
+    asyncEnumerable: new AsyncQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        SqlServerQuerySqlGeneratorFactory, 
+        SqlExpressionFactory, 
+        ParameterNameGeneratorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+        SELECT TOP(1) u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+        FROM Users AS u
+        WHERE (u.Id == @__p_0) && NotEqual(@__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        WebAPI.Data.ApplicationContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+10:51 [Debug] (8) Creating DbCommand for '"ExecuteReader"'.
+10:51 [Debug] (8) Created DbCommand for '"ExecuteReader"' (0ms).
+10:51 [Debug] (8) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (8) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Information] (8) Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:51 [Debug] (5) Executed DbCommand ("29"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:51 [Debug] (5) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:51 [Debug] (5) A data reader was disposed.
+10:51 [Debug] (5) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:51 [Debug] (5) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:52 [Debug] (5) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:52 [Debug] (5) SaveChanges starting for '"ApplicationContext"'.
+10:52 [Debug] (5) DetectChanges starting for '"ApplicationContext"'.
+10:52 [Debug] (5) DetectChanges completed for '"ApplicationContext"'.
+10:52 [Debug] (5) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:52 [Debug] (5) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:52 [Debug] (5) Beginning transaction with isolation level '"Unspecified"'.
+10:52 [Debug] (5) Began transaction with isolation level '"ReadCommitted"'.
+10:52 [Debug] (5) Creating DbCommand for '"ExecuteReader"'.
+10:52 [Debug] (5) Created DbCommand for '"ExecuteReader"' (0ms).
+10:52 [Information] (5) Executing DbCommand [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+10:52 [Debug] (14) Executed DbCommand ("4"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+10:52 [Debug] (14) A data reader was disposed.
+10:52 [Debug] (14) Committing transaction.
+10:52 [Debug] (14) Committing transaction.
+10:52 [Debug] (14) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:52 [Debug] (14) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:52 [Debug] (14) Disposing transaction.
+10:52 [Debug] (14) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:52 [Debug] (14) SaveChanges completed for '"ApplicationContext"' with 1 entities written to the database.
+10:52 [Information] (14) Executing HttpStatusCodeResult, setting HTTP status code 200
+10:52 [Information] (14) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 20305.5403ms
+10:52 [Information] (14) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:52 [Debug] (14) '"ApplicationContext"' disposed.
+10:52 [Information] (14) Request finished in 22244.5488ms 200 
+10:54 [Debug] (1) Hosting starting
+10:54 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+10:54 [Information] (1) Application started. Press Ctrl+C to shut down.
+10:54 [Information] (1) Hosting environment: "Development"
+10:54 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+10:54 [Debug] (1) Hosting started
+10:54 [Information] (9) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+10:54 [Debug] (9) Wildcard detected, all requests with hosts will be allowed.
+10:54 [Debug] (9) 1 candidate(s) found for the request path '"/api/users"'
+10:54 [Debug] (9) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+10:54 [Debug] (9) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:54 [Debug] (9) Static files was skipped as the request already matched an endpoint.
+10:54 [Information] (9) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:54 [Debug] (9) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+10:54 [Information] (9) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:54 [Debug] (9) Execution plan of "authorization" filters (in the following order): ["None"]
+10:54 [Debug] (9) Execution plan of "resource" filters (in the following order): ["None"]
+10:54 [Debug] (9) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:54 [Debug] (9) Execution plan of "exception" filters (in the following order): ["None"]
+10:54 [Debug] (9) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:54 [Debug] (9) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:54 [Debug] (9) An 'IServiceProvider' was created for internal use by Entity Framework.
+10:54 [Debug] (9) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:54 [Information] (9) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:54 [Debug] (9) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+10:54 [Debug] (9) Creating DbCommand for '"ExecuteReader"'.
+10:54 [Debug] (9) Created DbCommand for '"ExecuteReader"' (115ms).
+10:54 [Debug] (9) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Debug] (9) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Information] (9) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:54 [Debug] (8) Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:54 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:54 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:54 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:54 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:54 [Debug] (8) A data reader was disposed.
+10:54 [Debug] (8) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Debug] (8) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Debug] (8) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:54 [Debug] (8) No information found on request to perform content negotiation.
+10:54 [Debug] (8) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+10:54 [Debug] (8) Attempting to select the first formatter in the output formatters list which can write the result.
+10:54 [Debug] (8) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+10:54 [Information] (8) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10:54 [Information] (8) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 1010.956ms
+10:54 [Information] (8) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:54 [Debug] (8) '"ApplicationContext"' disposed.
+10:54 [Information] (8) Request finished in 1096.8319000000001ms 200 application/json; charset=utf-8
+10:54 [Information] (7) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload multipart/form-data; boundary=--------------------------589576209995578963408174 120924
+10:54 [Debug] (7) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+10:54 [Debug] (7) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+10:54 [Debug] (7) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:54 [Debug] (7) Static files was skipped as the request already matched an endpoint.
+10:54 [Information] (7) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:54 [Information] (7) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:54 [Debug] (7) Execution plan of "authorization" filters (in the following order): ["None"]
+10:54 [Debug] (7) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+10:54 [Debug] (7) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:54 [Debug] (7) Execution plan of "exception" filters (in the following order): ["None"]
+10:54 [Debug] (7) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:54 [Debug] (7) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:54 [Debug] (7) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:54 [Debug] (16) Attempting to bind parameter '"id"' of type '"System.Int32"' ...
+10:54 [Debug] (16) Attempting to bind parameter '"id"' of type '"System.Int32"' using the name '"id"' in request data ...
+10:54 [Debug] (16) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:54 [Debug] (16) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:54 [Debug] (16) Attempting to validate the bound parameter '"id"' of type '"System.Int32"' ...
+10:54 [Debug] (16) Done attempting to validate the bound parameter '"id"' of type '"System.Int32"'.
+10:54 [Debug] (16) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:54 [Debug] (16) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' using the name '"file"' in request data ...
+10:54 [Debug] (16) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:54 [Debug] (16) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:54 [Debug] (16) Attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:54 [Debug] (16) Done attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:54 [Information] (16) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:54 [Debug] (16) "(queryContext) => SingleOrDefaultAsync<User>(
+    asyncEnumerable: new AsyncQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        SqlServerQuerySqlGeneratorFactory, 
+        SqlExpressionFactory, 
+        ParameterNameGeneratorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+        SELECT TOP(1) u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+        FROM Users AS u
+        WHERE (u.Id == @__p_0) && NotEqual(@__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        WebAPI.Data.ApplicationContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+10:54 [Debug] (16) Creating DbCommand for '"ExecuteReader"'.
+10:54 [Debug] (16) Created DbCommand for '"ExecuteReader"' (0ms).
+10:54 [Debug] (16) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Debug] (16) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Information] (16) Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:54 [Debug] (4) Executed DbCommand ("30"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:54 [Debug] (4) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:54 [Debug] (4) A data reader was disposed.
+10:54 [Debug] (4) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:54 [Debug] (4) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Debug] (1) Hosting starting
+10:59 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+10:59 [Information] (1) Application started. Press Ctrl+C to shut down.
+10:59 [Information] (1) Hosting environment: "Development"
+10:59 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+10:59 [Debug] (1) Hosting started
+10:59 [Information] (8) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+10:59 [Debug] (8) Wildcard detected, all requests with hosts will be allowed.
+10:59 [Debug] (8) 1 candidate(s) found for the request path '"/api/users"'
+10:59 [Debug] (8) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+10:59 [Debug] (8) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:59 [Debug] (8) Static files was skipped as the request already matched an endpoint.
+10:59 [Information] (8) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:59 [Debug] (8) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+10:59 [Information] (8) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:59 [Debug] (8) Execution plan of "authorization" filters (in the following order): ["None"]
+10:59 [Debug] (8) Execution plan of "resource" filters (in the following order): ["None"]
+10:59 [Debug] (8) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:59 [Debug] (8) Execution plan of "exception" filters (in the following order): ["None"]
+10:59 [Debug] (8) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:59 [Debug] (8) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:59 [Debug] (8) An 'IServiceProvider' was created for internal use by Entity Framework.
+10:59 [Debug] (8) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:59 [Information] (8) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:59 [Debug] (8) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+10:59 [Debug] (8) Creating DbCommand for '"ExecuteReader"'.
+10:59 [Debug] (8) Created DbCommand for '"ExecuteReader"' (117ms).
+10:59 [Debug] (8) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Debug] (4) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Information] (4) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:59 [Debug] (9) Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+10:59 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:59 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:59 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:59 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:59 [Debug] (9) A data reader was disposed.
+10:59 [Debug] (9) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Debug] (9) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Debug] (9) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+10:59 [Debug] (9) No information found on request to perform content negotiation.
+10:59 [Debug] (9) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+10:59 [Debug] (9) Attempting to select the first formatter in the output formatters list which can write the result.
+10:59 [Debug] (9) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+10:59 [Information] (9) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+10:59 [Information] (9) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 1053.428ms
+10:59 [Information] (9) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+10:59 [Debug] (9) '"ApplicationContext"' disposed.
+10:59 [Information] (9) Request finished in 1147.555ms 200 application/json; charset=utf-8
+10:59 [Information] (4) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload multipart/form-data; boundary=--------------------------556633998207369710697391 120924
+10:59 [Debug] (4) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+10:59 [Debug] (4) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+10:59 [Debug] (4) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:59 [Debug] (4) Static files was skipped as the request already matched an endpoint.
+10:59 [Information] (4) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+10:59 [Information] (4) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+10:59 [Debug] (4) Execution plan of "authorization" filters (in the following order): ["None"]
+10:59 [Debug] (4) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+10:59 [Debug] (4) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+10:59 [Debug] (4) Execution plan of "exception" filters (in the following order): ["None"]
+10:59 [Debug] (4) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+10:59 [Debug] (4) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:59 [Debug] (4) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+10:59 [Debug] (15) Attempting to bind parameter '"id"' of type '"System.Int32"' ...
+10:59 [Debug] (15) Attempting to bind parameter '"id"' of type '"System.Int32"' using the name '"id"' in request data ...
+10:59 [Debug] (15) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:59 [Debug] (15) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+10:59 [Debug] (15) Attempting to validate the bound parameter '"id"' of type '"System.Int32"' ...
+10:59 [Debug] (15) Done attempting to validate the bound parameter '"id"' of type '"System.Int32"'.
+10:59 [Debug] (15) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:59 [Debug] (15) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' using the name '"file"' in request data ...
+10:59 [Debug] (15) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:59 [Debug] (15) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:59 [Debug] (15) Attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+10:59 [Debug] (15) Done attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+10:59 [Information] (15) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+10:59 [Debug] (15) "(queryContext) => SingleOrDefaultAsync<User>(
+    asyncEnumerable: new AsyncQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        SqlServerQuerySqlGeneratorFactory, 
+        SqlExpressionFactory, 
+        ParameterNameGeneratorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+        SELECT TOP(1) u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+        FROM Users AS u
+        WHERE (u.Id == @__p_0) && NotEqual(@__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        WebAPI.Data.ApplicationContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+10:59 [Debug] (15) Creating DbCommand for '"ExecuteReader"'.
+10:59 [Debug] (15) Created DbCommand for '"ExecuteReader"' (0ms).
+10:59 [Debug] (15) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Debug] (15) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Information] (15) Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:59 [Debug] (10) Executed DbCommand ("29"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+10:59 [Debug] (10) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+10:59 [Debug] (10) A data reader was disposed.
+10:59 [Debug] (10) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+10:59 [Debug] (10) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:00 [Debug] (4) Unchanged '"User"."ImageUrl"' detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+11:00 [Debug] (4) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:00 [Debug] (4) SaveChanges starting for '"ApplicationContext"'.
+11:00 [Debug] (4) DetectChanges starting for '"ApplicationContext"'.
+11:00 [Debug] (4) DetectChanges completed for '"ApplicationContext"'.
+11:00 [Debug] (4) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:00 [Debug] (4) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:00 [Debug] (4) Beginning transaction with isolation level '"Unspecified"'.
+11:00 [Debug] (4) Began transaction with isolation level '"ReadCommitted"'.
+11:00 [Debug] (4) Creating DbCommand for '"ExecuteReader"'.
+11:00 [Debug] (4) Created DbCommand for '"ExecuteReader"' (0ms).
+11:00 [Information] (4) Executing DbCommand [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+11:00 [Debug] (8) Executed DbCommand ("4"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+11:00 [Debug] (8) A data reader was disposed.
+11:00 [Debug] (8) Committing transaction.
+11:00 [Debug] (8) Committing transaction.
+11:00 [Debug] (8) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:00 [Debug] (8) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:00 [Debug] (8) Disposing transaction.
+11:00 [Debug] (8) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:00 [Debug] (8) SaveChanges completed for '"ApplicationContext"' with 1 entities written to the database.
+11:00 [Information] (8) Executing HttpStatusCodeResult, setting HTTP status code 200
+11:00 [Information] (8) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 30813.880500000003ms
+11:00 [Information] (8) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:00 [Debug] (8) '"ApplicationContext"' disposed.
+11:00 [Information] (8) Request finished in 30829.4133ms 200 
+11:03 [Debug] (1) Hosting starting
+11:03 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+11:03 [Information] (1) Application started. Press Ctrl+C to shut down.
+11:03 [Information] (1) Hosting environment: "Development"
+11:03 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+11:03 [Debug] (1) Hosting started
+11:03 [Information] (9) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+11:03 [Debug] (9) Wildcard detected, all requests with hosts will be allowed.
+11:03 [Debug] (9) 1 candidate(s) found for the request path '"/api/users"'
+11:03 [Debug] (9) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+11:03 [Debug] (9) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+11:03 [Debug] (9) Static files was skipped as the request already matched an endpoint.
+11:03 [Information] (9) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+11:03 [Debug] (9) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+11:03 [Information] (9) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+11:03 [Debug] (9) Execution plan of "authorization" filters (in the following order): ["None"]
+11:03 [Debug] (9) Execution plan of "resource" filters (in the following order): ["None"]
+11:03 [Debug] (9) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+11:03 [Debug] (9) Execution plan of "exception" filters (in the following order): ["None"]
+11:03 [Debug] (9) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+11:03 [Debug] (9) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:03 [Debug] (9) An 'IServiceProvider' was created for internal use by Entity Framework.
+11:03 [Debug] (9) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:03 [Information] (9) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11:03 [Debug] (9) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+11:03 [Debug] (9) Creating DbCommand for '"ExecuteReader"'.
+11:03 [Debug] (9) Created DbCommand for '"ExecuteReader"' (119ms).
+11:03 [Debug] (9) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Debug] (8) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Information] (8) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+11:03 [Debug] (8) Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+11:03 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:03 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:03 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:03 [Debug] (8) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:03 [Debug] (8) A data reader was disposed.
+11:03 [Debug] (8) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Debug] (8) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Debug] (8) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+11:03 [Debug] (8) No information found on request to perform content negotiation.
+11:03 [Debug] (8) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+11:03 [Debug] (8) Attempting to select the first formatter in the output formatters list which can write the result.
+11:03 [Debug] (8) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+11:03 [Information] (8) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+11:03 [Information] (8) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 988.9735000000001ms
+11:03 [Information] (8) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+11:03 [Debug] (8) '"ApplicationContext"' disposed.
+11:03 [Information] (8) Request finished in 1078.4193ms 200 application/json; charset=utf-8
+11:03 [Information] (4) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload multipart/form-data; boundary=--------------------------933843780987663376566679 120924
+11:03 [Debug] (4) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+11:03 [Debug] (4) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+11:03 [Debug] (4) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:03 [Debug] (4) Static files was skipped as the request already matched an endpoint.
+11:03 [Information] (4) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:03 [Information] (4) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+11:03 [Debug] (4) Execution plan of "authorization" filters (in the following order): ["None"]
+11:03 [Debug] (4) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+11:03 [Debug] (4) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+11:03 [Debug] (4) Execution plan of "exception" filters (in the following order): ["None"]
+11:03 [Debug] (4) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+11:03 [Debug] (4) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:03 [Debug] (4) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:03 [Debug] (14) Attempting to bind parameter '"id"' of type '"System.Int32"' ...
+11:03 [Debug] (14) Attempting to bind parameter '"id"' of type '"System.Int32"' using the name '"id"' in request data ...
+11:03 [Debug] (14) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+11:03 [Debug] (14) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+11:03 [Debug] (14) Attempting to validate the bound parameter '"id"' of type '"System.Int32"' ...
+11:03 [Debug] (14) Done attempting to validate the bound parameter '"id"' of type '"System.Int32"'.
+11:03 [Debug] (14) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+11:03 [Debug] (14) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' using the name '"file"' in request data ...
+11:03 [Debug] (14) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+11:03 [Debug] (14) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+11:03 [Debug] (14) Attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+11:03 [Debug] (14) Done attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+11:03 [Information] (14) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11:03 [Debug] (14) "(queryContext) => SingleOrDefaultAsync<User>(
+    asyncEnumerable: new AsyncQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        SqlServerQuerySqlGeneratorFactory, 
+        SqlExpressionFactory, 
+        ParameterNameGeneratorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+        SELECT TOP(1) u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+        FROM Users AS u
+        WHERE (u.Id == @__p_0) && NotEqual(@__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        WebAPI.Data.ApplicationContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+11:03 [Debug] (14) Creating DbCommand for '"ExecuteReader"'.
+11:03 [Debug] (14) Created DbCommand for '"ExecuteReader"' (0ms).
+11:03 [Debug] (14) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Debug] (14) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Information] (14) Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+11:03 [Debug] (13) Executed DbCommand ("32"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+11:03 [Debug] (13) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:03 [Debug] (13) A data reader was disposed.
+11:03 [Debug] (13) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:03 [Debug] (13) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:04 [Debug] (4) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:04 [Debug] (4) SaveChanges starting for '"ApplicationContext"'.
+11:04 [Debug] (4) DetectChanges starting for '"ApplicationContext"'.
+11:04 [Debug] (4) DetectChanges completed for '"ApplicationContext"'.
+11:04 [Debug] (4) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:04 [Debug] (4) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:04 [Debug] (4) Beginning transaction with isolation level '"Unspecified"'.
+11:04 [Debug] (4) Began transaction with isolation level '"ReadCommitted"'.
+11:04 [Debug] (4) Creating DbCommand for '"ExecuteReader"'.
+11:04 [Debug] (4) Created DbCommand for '"ExecuteReader"' (0ms).
+11:04 [Information] (4) Executing DbCommand [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+11:04 [Debug] (14) Executed DbCommand ("3"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+11:04 [Debug] (14) A data reader was disposed.
+11:04 [Debug] (14) Committing transaction.
+11:04 [Debug] (14) Committing transaction.
+11:04 [Debug] (14) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:04 [Debug] (14) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:04 [Debug] (14) Disposing transaction.
+11:04 [Debug] (14) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:04 [Debug] (14) SaveChanges completed for '"ApplicationContext"' with 1 entities written to the database.
+11:04 [Information] (14) Executing HttpStatusCodeResult, setting HTTP status code 200
+11:04 [Information] (14) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 45667.2669ms
+11:04 [Information] (14) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:04 [Debug] (14) '"ApplicationContext"' disposed.
+11:04 [Information] (14) Request finished in 45681.678100000005ms 200 
+11:06 [Debug] (1) Hosting starting
+11:06 [Debug] (1) Loaded hosting startup assembly "WebAPI.API"
+11:06 [Information] (1) Application started. Press Ctrl+C to shut down.
+11:06 [Information] (1) Hosting environment: "Development"
+11:06 [Information] (1) Content root path: "D:\development\web_api_task\internal-web-api\WebAPI\WebAPI.API"
+11:06 [Debug] (1) Hosting started
+11:06 [Information] (4) Request starting HTTP/2.0 GET https://localhost:44334/api/users  
+11:06 [Debug] (4) Wildcard detected, all requests with hosts will be allowed.
+11:06 [Debug] (4) 1 candidate(s) found for the request path '"/api/users"'
+11:06 [Debug] (4) Endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"' with route pattern '"api/Users"' is valid for the request path '"/api/users"'
+11:06 [Debug] (4) Request matched endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+11:06 [Debug] (4) Static files was skipped as the request already matched an endpoint.
+11:06 [Information] (4) Executing endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+11:06 [Debug] (4) Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+11:06 [Information] (4) Route matched with "{action = \"GetAll\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[WebAPI.API.Models.Documents.UserDocument]] GetAll()" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+11:06 [Debug] (4) Execution plan of "authorization" filters (in the following order): ["None"]
+11:06 [Debug] (4) Execution plan of "resource" filters (in the following order): ["None"]
+11:06 [Debug] (4) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+11:06 [Debug] (4) Execution plan of "exception" filters (in the following order): ["None"]
+11:06 [Debug] (4) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+11:06 [Debug] (4) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:06 [Debug] (4) An 'IServiceProvider' was created for internal use by Entity Framework.
+11:06 [Debug] (4) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:06 [Information] (4) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11:06 [Debug] (4) "(queryContext) => new AsyncQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    SqlServerQuerySqlGeneratorFactory, 
+    SqlExpressionFactory, 
+    ParameterNameGeneratorFactory, 
+    Projection Mapping:
+        EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+    SELECT u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+    FROM Users AS u, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+    WebAPI.Data.ApplicationContext, 
+    DiagnosticsLogger<Query>
+)"
+11:06 [Debug] (4) Creating DbCommand for '"ExecuteReader"'.
+11:06 [Debug] (4) Created DbCommand for '"ExecuteReader"' (120ms).
+11:06 [Debug] (4) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (7) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Information] (7) Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+11:06 [Debug] (9) Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]"
+11:06 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (9) A data reader was disposed.
+11:06 [Debug] (9) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (9) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (9) List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter", "WebAPI.API.Formatters.CsvOutputFormatter"]
+11:06 [Debug] (9) No information found on request to perform content negotiation.
+11:06 [Debug] (9) Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+11:06 [Debug] (9) Attempting to select the first formatter in the output formatters list which can write the result.
+11:06 [Debug] (9) Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response.
+11:06 [Information] (9) Executing ObjectResult, writing value of type '"System.Linq.Enumerable+SelectListIterator`2[[WebAPI.Data.Contracts.Entities.User, WebAPI.Data.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[WebAPI.API.Models.Documents.UserDocument, WebAPI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+11:06 [Information] (9) Executed action "WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)" in 1056.1783ms
+11:06 [Information] (9) Executed endpoint '"WebAPI.API.Controllers.UsersController.GetAll (WebAPI.API)"'
+11:06 [Debug] (9) '"ApplicationContext"' disposed.
+11:06 [Information] (9) Request finished in 1152.5731ms 200 application/json; charset=utf-8
+11:06 [Information] (7) Request starting HTTP/1.1 POST https://localhost:44334/api/users/3/upload multipart/form-data; boundary=--------------------------477628374465528611174731 120924
+11:06 [Debug] (7) 1 candidate(s) found for the request path '"/api/users/3/upload"'
+11:06 [Debug] (7) Endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"' with route pattern '"api/Users/{id}/upload"' is valid for the request path '"/api/users/3/upload"'
+11:06 [Debug] (7) Request matched endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:06 [Debug] (7) Static files was skipped as the request already matched an endpoint.
+11:06 [Information] (7) Executing endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:06 [Information] (7) Route matched with "{action = \"Upload\", controller = \"Users\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Upload(Int32, Microsoft.AspNetCore.Http.IFormFile)" on controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API").
+11:06 [Debug] (7) Execution plan of "authorization" filters (in the following order): ["None"]
+11:06 [Debug] (7) Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ConsumesAttribute"]
+11:06 [Debug] (7) Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+11:06 [Debug] (7) Execution plan of "exception" filters (in the following order): ["None"]
+11:06 [Debug] (7) Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+11:06 [Debug] (7) Executing controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:06 [Debug] (7) Executed controller factory for controller "WebAPI.API.Controllers.UsersController" ("WebAPI.API")
+11:06 [Debug] (8) Attempting to bind parameter '"id"' of type '"System.Int32"' ...
+11:06 [Debug] (8) Attempting to bind parameter '"id"' of type '"System.Int32"' using the name '"id"' in request data ...
+11:06 [Debug] (8) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+11:06 [Debug] (8) Done attempting to bind parameter '"id"' of type '"System.Int32"'.
+11:06 [Debug] (8) Attempting to validate the bound parameter '"id"' of type '"System.Int32"' ...
+11:06 [Debug] (8) Done attempting to validate the bound parameter '"id"' of type '"System.Int32"'.
+11:06 [Debug] (8) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+11:06 [Debug] (8) Attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' using the name '"file"' in request data ...
+11:06 [Debug] (8) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+11:06 [Debug] (8) Done attempting to bind parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+11:06 [Debug] (8) Attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"' ...
+11:06 [Debug] (8) Done attempting to validate the bound parameter '"file"' of type '"Microsoft.AspNetCore.Http.IFormFile"'.
+11:06 [Information] (8) Entity Framework Core "3.0.0" initialized '"ApplicationContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11:06 [Debug] (8) "(queryContext) => SingleOrDefaultAsync<User>(
+    asyncEnumerable: new AsyncQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        SqlServerQuerySqlGeneratorFactory, 
+        SqlExpressionFactory, 
+        ParameterNameGeneratorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.BirthDate (Nullable<DateTime>), 1], [Property: User.CompanyId (Nullable<int>) FK Index, 2], [Property: User.Email (string) Required MaxLength255, 3], [Property: User.ImageUrl (string), 4], [Property: User.Name (string) Required MaxLength100, 5], [Property: User.Surname (string) Required MaxLength100, 6], }
+        SELECT TOP(1) u.Id, u.BirthDate, u.CompanyId, u.Email, u.ImageUrl, u.Name, u.Surname
+        FROM Users AS u
+        WHERE (u.Id == @__p_0) && NotEqual(@__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, User>, 
+        WebAPI.Data.ApplicationContext, 
+        DiagnosticsLogger<Query>
+    ), 
+    cancellationToken: queryContext.CancellationToken)"
+11:06 [Debug] (8) Creating DbCommand for '"ExecuteReader"'.
+11:06 [Debug] (8) Created DbCommand for '"ExecuteReader"' (0ms).
+11:06 [Debug] (8) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (8) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Information] (8) Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+11:06 [Debug] (9) Executed DbCommand ("29"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[BirthDate], [u].[CompanyId], [u].[Email], [u].[ImageUrl], [u].[Name], [u].[Surname]
+FROM [Users] AS [u]
+WHERE ([u].[Id] = @__p_0) AND @__p_0 IS NOT NULL"
+11:06 [Debug] (9) Context '"ApplicationContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (9) A data reader was disposed.
+11:06 [Debug] (9) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (9) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (13) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (13) SaveChanges starting for '"ApplicationContext"'.
+11:06 [Debug] (13) DetectChanges starting for '"ApplicationContext"'.
+11:06 [Debug] (13) DetectChanges completed for '"ApplicationContext"'.
+11:06 [Debug] (13) Opening connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (13) Opened connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (13) Beginning transaction with isolation level '"Unspecified"'.
+11:06 [Debug] (13) Began transaction with isolation level '"ReadCommitted"'.
+11:06 [Debug] (13) Creating DbCommand for '"ExecuteReader"'.
+11:06 [Debug] (13) Created DbCommand for '"ExecuteReader"' (0ms).
+11:06 [Information] (13) Executing DbCommand [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+11:06 [Debug] (4) Executed DbCommand ("2"ms) [Parameters=["@p6='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 100), @p5='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Users] SET [BirthDate] = @p0, [CompanyId] = @p1, [Email] = @p2, [ImageUrl] = @p3, [Name] = @p4, [Surname] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;"
+11:06 [Debug] (4) A data reader was disposed.
+11:06 [Debug] (4) Committing transaction.
+11:06 [Debug] (4) Committing transaction.
+11:06 [Debug] (4) Closing connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (4) Closed connection to database '"ApplicationDb"' on server '"(localdb)\mssqllocaldb"'.
+11:06 [Debug] (4) Disposing transaction.
+11:06 [Debug] (4) An '"User"' entity tracked by '"ApplicationContext"' changed from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+11:06 [Debug] (4) SaveChanges completed for '"ApplicationContext"' with 1 entities written to the database.
+11:06 [Information] (4) Executing HttpStatusCodeResult, setting HTTP status code 200
+11:06 [Information] (4) Executed action "WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)" in 3372.28ms
+11:06 [Information] (4) Executed endpoint '"WebAPI.API.Controllers.UsersController.Upload (WebAPI.API)"'
+11:06 [Debug] (4) '"ApplicationContext"' disposed.
+11:06 [Information] (4) Request finished in 3387.4365000000003ms 200 

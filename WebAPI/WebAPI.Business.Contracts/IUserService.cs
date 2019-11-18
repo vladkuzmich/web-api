@@ -12,5 +12,6 @@ namespace WebAPI.Business.Contracts
         Task EditAsync(int id, UserDto userDto);
         Task DeleteAsync(int id);
         Task ChangeCompanyAsync(int userId, int companyId);
+        Task UploadPhotoAsync(int id, string fileName, byte[] imageData, string storagePath, int width, int height);
     }
 }

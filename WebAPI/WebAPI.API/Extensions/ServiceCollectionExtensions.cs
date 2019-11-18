@@ -6,6 +6,7 @@ using WebAPI.API.Converters.Interfaces;
 using WebAPI.API.Models.Documents;
 using WebAPI.Business.Contracts;
 using WebAPI.Business.Converters;
+using WebAPI.Business.Providers;
 using WebAPI.Business.Services;
 using WebAPI.Data;
 using WebAPI.Data.Contracts;
@@ -49,6 +50,9 @@ namespace WebAPI.API.Extensions
 
             serviceCollection
                 .AddScoped<ICompanyService, CompanyService>();
+
+            serviceCollection
+                .AddSingleton<IImageProvider, ImageProvider>();
 
             serviceCollection
                 .AddSingleton<IUserConverter, UserConverter>();

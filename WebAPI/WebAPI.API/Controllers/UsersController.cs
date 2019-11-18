@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.API.Converters.Interfaces;
 using WebAPI.API.Models.Documents;
@@ -14,15 +17,18 @@ namespace WebAPI.API.Controllers
     {
         private readonly IUserService _userService;
         private readonly ICompanyService _companyService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IUserDocumentConverter _userDocumentConverter;
 
         public UsersController(
             IUserService userService,
             ICompanyService companyService,
+            IWebHostEnvironment webHostEnvironment,
             IUserDocumentConverter userDocumentConverter)
         {
             _userService = userService ?? throw new ArgumentNullException(nameof(userService));
             _companyService = companyService ?? throw new ArgumentNullException(nameof(companyService));
+            _webHostEnvironment = webHostEnvironment ?? throw new ArgumentNullException(nameof(webHostEnvironment));
             _userDocumentConverter = userDocumentConverter ?? throw new ArgumentNullException(nameof(userDocumentConverter));
         }
 
@@ -111,6 +117,31 @@ namespace WebAPI.API.Controllers
             await _userService.ChangeCompanyAsync(userId, companyId);
 
             return NoContent();
+        }
+
+        // POST: api/users/5/upload/url
+        [HttpPost("{id}/upload")]
+        public async Task<ActionResult> Upload(int id, IFormFile file)
+        {
+            var userDto = await _userService.GetByIdAsync(id);
+            if (userDto == null)
+            {
+                return NotFound($"User with id: {id} not found");
+            }
+
+            if (file == null)
+            {
+                return BadRequest();
+            }
+
+            await using var memoryStream = new MemoryStream();
+            await file.CopyToAsync(memoryStream);
+
+            var storagePath = _webHostEnvironment.WebRootPath + "\\images\\";
+
+            await _userService.UploadPhotoAsync(id, file.FileName, memoryStream.ToArray(), storagePath, 300, 300);
+
+            return Ok();
         }
     }
 }
